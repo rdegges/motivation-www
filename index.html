@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>motivation.io - Instant Bodybuilding Motivation</title>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+SC:700' rel='stylesheet' type='text/css'>
+    <link href="static/css/main.css" rel="stylesheet" type="text/css">
+    <meta name="google-site-verification" content="26gkOg5_jLFtuIxU58r4UdaMvwt_dljLyPsgr532knU" />
+    <meta name="description" content="Need to get motivated and pumped up for
+      your workout? We've got the best bodybuilding videos. Period." />
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-11364428-24', 'motivation.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="http://www.motivation.io" title="motivation.io - Get motivated, hit the gym.">MOTIVATION.IO</a>
+      </h1>
+      <h2>
+        <a href="http://www.motivation.io" title="motivation.io - Get motivated, hit the gym.">get motivated, hit the gym</a>
+      </h2>
+    </header>
+    <div id="content">
+      <div id="player"></div>
+      <!--<iframe id="ytplayer" class="ytplayer" type="text/html"
+        src="http://www.youtube.com/embed?listType=playlist&list=PLcwYgm59HiE82bVYzN56UC-2mBkN0n9Ps&showinfo=0&enablejsapi=1&iv_load_policy=3&loop=1&modestbranding=1&origin=www.motivation.io&playsinline=0&rel=0"
+        frameborder="0" allowfullscreen>
+      </iframe>-->
+    </div>
+    <div id="footer">
+      <p>
+        Built by <a href="http://www.rdegges.com/" title="Randall
+        Degges">Randall Degges</a> (<a href="https://twitter.com/rdegges"
+        title="Randall Degges on Twitter">@rdegges</a>) and <a
+        href="http://www.zaidox.com/" title="Alven Diaz">Alven Diaz</a> (<a
+        href="https://twitter.com/zaidos" title="Alven Diaz on
+        Twitter">@zaidos</a>).
+      </p>
+    </div>
+    <script>
+      // Load the Youtube API.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player;
+
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          playerVars: {
+            showinfo: 0,
+            enablejsapi: 1,
+            iv_load_policy: 3,
+            loop: 1,
+            modestbranding: 1,
+            origin: 'www.motivation.io',
+            playsinline: 0,
+            rel: 0,
+            autohide: 1,
+            enablejsapi: 1
+          },
+          events: {
+            'onError': onError,
+            'onReady': onReady
+          }
+        });
+
+        // Add the 'ytplayer' class to our new player object so we can style
+        // things.
+        var domPlayer = document.getElementById('player');
+        domPlayer.className = 'ytplayer';
+      }
+
+      /**
+       * This handler will be ran if there is was an error playing a video.  In
+       * these cases, we'll simply try to play the next video.
+       */
+      function onError(event) {
+        event.target.nextVideo();
+      }
+
+      /**
+       * This handler will be ran once the Youtube player is fully initialized
+       * and ready to go.
+       *
+       * What we'll do here is tell Youtube to shuffle the playlist so that all
+       * the videos are shown in random order, then we'll immediately start
+       * playing a random video.
+       */
+      function onReady(event) {
+        var player = event.target;
+
+        // Here, we'll queue up our playlist in such a way that it is loaded,
+        // but won't start playing immediately.  This will give us a chance to
+        // catch the load event below, then shuffle the playlist and play the
+        // videos.
+        player.cuePlaylist({
+          list: 'PLcwYgm59HiE82bVYzN56UC-2mBkN0n9Ps',
+          listType: 'playlist'
+        });
+
+        // This interval function is used to start playing the videos once the
+        // Youtube playlist has been fully loaded.  This is a hacky workaround
+        // due to the Youtube iframe API not allowing callbacks :(
+        // See: https://developers.google.com/youtube/iframe_api_reference?hl=en#getPlayerState
+        var startPlayback = setInterval(function() {
+          if (player.getPlayerState() === 5) {
+
+            // First, we'll shuffle the playlist after Youtube has a chance to
+            // recognize the playlist we want to play.
+            setTimeout(function() {
+              player.setShuffle(true);
+
+              // Next, we'll wait for the playlist to be shuffled, then we'll
+              // start playing the videos in 'shuffled' order so it appears
+              // random.
+              setTimeout(function() {
+                player.nextVideo();
+              }, 1000);
+            }, 1000);
+            clearInterval(startPlayback);
+          }
+        }, 100);
+      }
+    </script>
+    <!--
+    <script type="text/javascript" src="static/js/kibo.js"></script>
+    <script type="text/javascript">
+      (function() {
+        "use strict";
+
+        var player, k = new Kibo();
+
+        window.onPlayerReady = function(e) {
+          e.target.clearVideo();
+
+          setTimeout(function() {
+            e.target.setShuffle(true);
+            e.target.nextVideo();
+          }, 750);
+        }
+
+        window.onYouTubeIframeAPIReady = function() {
+          player = new YT.Player('ytplayer', {
+            events: {
+              'onReady': onPlayerReady
+            }
+          });
+        }
+
+        k.down(['n', 'l', 'right'], function() {
+          player.nextVideo();
+          return false;
+        });
+
+        k.down(['b', 'h', 'left'], function() {
+          player.previousVideo();
+          return false;
+        });
+
+        var loadScript = function() {
+          var tag, scriptTag;
+          tag = document.createElement('script');
+          tag.src = 'https://www.youtube.com/iframe_api';
+          scriptTag = document.getElementsByTagName('script')[0];
+          scriptTag.parentNode.insertBefore(tag, scriptTag);
+        }
+
+        loadScript();
+      })();
+    </script>
+    -->
+  </body>
+</html>
