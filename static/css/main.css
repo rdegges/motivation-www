@@ -1,0 +1,74 @@
+body {
+  background: #131814;
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+  font-family: 'Alegreya SC', serif;
+  font-weight: bold;
+  font-size: 60px;
+  margin: 0px;
+  padding: 0px;
+}
+
+header h2 {
+  color: white;
+  font-size: 30px;
+  font-family: 'Alegreya SC', serif;
+  font-style: bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+#content {
+  margin: 0px;
+  padding: 80px;
+  background: #fff no-repeat url('../img/18750-weight-bar-gym-workout.jpg');
+  /*border-bottom: solid 2px #ce7933;*/
+  /*border-top: solid 2px #ce7933;*/
+  border-bottom: solid 2px #000;
+  border-top: solid 2px #000;
+  text-align: center;
+}
+
+.ytplayer {
+  background-color: #ce7933;
+  border: 3px solid rgb(19, 24, 20, .5);
+  border: 3px solid rgba(19, 24, 20, .5);
+  margin-left: auto;
+  margin-right: auto;
+  width: 854px;
+  height: 480px;
+  vertical-align: middle;
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+}
+
+#footer {
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px;
+}
+body a:link { color: #ce7933; }
+body a:visited {color:#ce7933;}
+body a:hover {color:#ce7933;}
+body a:active {color:#ce7933;}
+header a { text-decoration: none; }
+header a:link { color: white; }
+header a:visited { color: white; }
+header a:hover { color: white; }
+header a:active { color: white; }
