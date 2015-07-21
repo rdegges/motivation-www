@@ -33,7 +33,7 @@ header h2 {
 #content {
   margin: 0px;
   padding: 80px;
-  background: #fff no-repeat url('../img/18750-weight-bar-gym-workout.jpg');
+  background: #fff no-repeat url('/static/img/weight-bar.jpg');
   /*border-bottom: solid 2px #ce7933;*/
   /*border-top: solid 2px #ce7933;*/
   border-bottom: solid 2px #000;
