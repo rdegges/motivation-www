@@ -1,0 +1,29 @@
+{
+  "name": "motivation-www",
+  "version": "1.0.0",
+  "description": "Instant bodybuilding motivation.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rdegges/motivation-www.git"
+  },
+  "keywords": [
+    "bodybuilding",
+    "fitness",
+    "motivation"
+  ],
+  "author": "Randall Degges",
+  "license": "UNLICENSE",
+  "bugs": {
+    "url": "https://github.com/rdegges/motivation-www/issues"
+  },
+  "homepage": "https://github.com/rdegges/motivation-www",
+  "devDependencies": {
+    "connect": "^3.4.0",
+    "gulp": "^3.9.0",
+    "serve-static": "^1.10.0"
+  }
+}
