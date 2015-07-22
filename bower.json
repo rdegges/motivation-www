@@ -1,0 +1,24 @@
+{
+  "name": "motivation-www",
+  "version": "1.0.0",
+  "homepage": "https://github.com/rdegges/motivation-www",
+  "authors": [
+    "Randall Degges <r@rdegges.com>"
+  ],
+  "description": "Instant bodybuilding motivation.",
+  "main": "index.html",
+  "keywords": [
+    "bodybuilding",
+    "fitness",
+    "motivation",
+    "videos"
+  ],
+  "license": "UNLICENSE",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
