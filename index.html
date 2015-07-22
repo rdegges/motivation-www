@@ -129,53 +129,5 @@
         }, 100);
       }
     </script>
-
-    <!--
-    <script type="text/javascript" src="static/js/kibo.js"></script>
-    <script type="text/javascript">
-      (function() {
-        "use strict";
-
-        var player, k = new Kibo();
-
-        window.onPlayerReady = function(e) {
-          e.target.clearVideo();
-
-          setTimeout(function() {
-            e.target.setShuffle(true);
-            e.target.nextVideo();
-          }, 750);
-        }
-
-        window.onYouTubeIframeAPIReady = function() {
-          player = new YT.Player('ytplayer', {
-            events: {
-              'onReady': onPlayerReady
-            }
-          });
-        }
-
-        k.down(['n', 'l', 'right'], function() {
-          player.nextVideo();
-          return false;
-        });
-
-        k.down(['b', 'h', 'left'], function() {
-          player.previousVideo();
-          return false;
-        });
-
-        var loadScript = function() {
-          var tag, scriptTag;
-          tag = document.createElement('script');
-          tag.src = 'https://www.youtube.com/iframe_api';
-          scriptTag = document.getElementsByTagName('script')[0];
-          scriptTag.parentNode.insertBefore(tag, scriptTag);
-        }
-
-        loadScript();
-      })();
-    </script>
-    -->
   </body>
 </html>
