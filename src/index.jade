@@ -1,44 +1,31 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <title>motivation.io - Instant Bodybuilding Motivation</title>
-    <link href="http://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Alegreya+SC:700" rel="stylesheet" type="text/css" />
-    <link href="/static/css/main.css" rel="stylesheet" type="text/css" />
-    <meta name="google-site-verification" content="26gkOg5_jLFtuIxU58r4UdaMvwt_dljLyPsgr532knU" />
-    <meta name="description" content="Need to get motivated and pumped up for your workout? We've got the best bodybuilding videos. Period." />
-    <script>
+doctype html
+html
+  head
+    title motivation.io - Instant Bodybuilding Motivation
+    link(href="http://fonts.googleapis.com/css?family=Noto+Sans", rel="stylesheet", type="text/css")
+    link(href="http://fonts.googleapis.com/css?family=Alegreya+SC:700", rel="stylesheet", type="text/css")
+    link(href="/static/css/main.css", rel="stylesheet", type="text/css")
+    meta(name="google-site-verification", content="26gkOg5_jLFtuIxU58r4UdaMvwt_dljLyPsgr532knU")
+    meta(name="description", content="Need to get motivated and pumped up for your workout? We've got the best bodybuilding videos. Period.")
+    script(type="text/javascript").
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-11364428-24', 'motivation.io');
       ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <header>
-      <h1>
-        <a href="http://www.motivation.io" title="motivation.io - Get motivated, hit the gym.">MOTIVATION.IO</a>
-      </h1>
-      <h2>
-        <a href="http://www.motivation.io" title="motivation.io - Get motivated, hit the gym.">get motivated, hit the gym</a>
-      </h2>
-    </header>
-    <div id="content">
-      <div id="player"></div>
-    </div>
-    <div id="footer">
-      <p>
-        Built by <a href="http://www.rdegges.com/" title="Randall
-        Degges">Randall Degges</a> (<a href="https://twitter.com/rdegges"
-        title="Randall Degges on Twitter">@rdegges</a>) and <a
-        href="http://www.zaidox.com/" title="Alven Diaz">Alven Diaz</a> (<a
-        href="https://twitter.com/zaidos" title="Alven Diaz on
-        Twitter">@zaidos</a>).
-      </p>
-    </div>
-    <script>
+  body
+    header
+      h1
+        a(href="http://www.motivation.io", title="motivation.io - Get motivated, hit the gym.") MOTIVATION.IO
+      h2
+        a(href="http://www.motivation.io", title="motivation.io - Get motivated, hit the gym.") get motivated, hit the gym
+    #content
+      #player
+    #footer
+      p.
+        Built by <a href="http://www.rdegges.com/" title="Randall Degges">Randall Degges</a> (<a href="https://twitter.com/rdegges" title="Randall Degges on Twitter">@rdegges</a>) and <a href="http://www.zaidox.com/" title="Alven Diaz">Alven Diaz</a> (<a href="https://twitter.com/zaidos" title="Alven Diaz on Twitter">@zaidos</a>).
+    script(type="text/javascript").
       // Load the Youtube API.
       var tag = document.createElement('script');
 
@@ -127,6 +114,3 @@
           }
         }, 100);
       }
-    </script>
-  </body>
-</html>
